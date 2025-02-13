@@ -3,22 +3,12 @@ import { ProfileStyled, Notauthenticated, Roles } from "./profile.Styled";
 import { useAuth0 } from "@auth0/auth0-react";
 import { LogoutButton } from "../logoutButton/logoutButton";
 import { LoginButton } from "../loginButton/loginButton";
-import { Container } from "../container/container";
-import { Loading } from "../loadings/loadings";
 
 export const Profile = () => {
   const { user, isAuthenticated, isLoading } = useAuth0();
   console.log(user);
   const roles = user ? user["https://my-app.example.com/roles"] : [];
   console.log(roles);
-
-  if (isLoading) {
-    return (
-      <Container width={"1200px"}>
-        <Loading />
-      </Container>
-    );
-  }
 
   if (!isAuthenticated) {
     return (

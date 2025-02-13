@@ -7,7 +7,6 @@ import { Container } from "../../components/container/container";
 import { AuthorName, DateAuthorContainer } from "../../components/article/article.Styled";
 import { ReleaseDate } from "../../components/releaseDate/releaseDate";
 import { useAuth0 } from "@auth0/auth0-react";
-import { Loading } from "../../components/loadings/loadings";
 
 export const Detailspage = () => {
   const { articleID } = useParams();
@@ -25,14 +24,6 @@ export const Detailspage = () => {
   }, [articleID]);
 
   console.log(articleDetails);
-
-  if (isLoading) {
-    return (
-      <Container width={"1200px"}>
-        <Loading />
-      </Container>
-    );
-  }
 
   return (
     <Container width={"1200px"}>
