@@ -1,5 +1,4 @@
 import { LoadingStyled } from "./loading.styled";
-
 export const Loading = () => {
   return (
     <LoadingStyled>
