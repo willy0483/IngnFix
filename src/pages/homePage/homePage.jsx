@@ -8,7 +8,7 @@ import { ReleaseDate } from "../../components/releaseDate/releaseDate";
 import { Container } from "../../components/container/container";
 import { GridContainer } from "../../components/gridContainer/gridContainer";
 import { GridItem, NeedLogIn } from "../../components/gridContainer/gridContainer.Styled";
-import { Loading } from "../../components/loading/loading";
+import { Loading } from "../../components/loadings/loadings";
 
 import { useAuth0 } from "@auth0/auth0-react";
 

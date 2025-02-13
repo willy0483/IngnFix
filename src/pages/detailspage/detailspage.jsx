@@ -7,7 +7,7 @@ import { Container } from "../../components/container/container";
 import { AuthorName, DateAuthorContainer } from "../../components/article/article.Styled";
 import { ReleaseDate } from "../../components/releaseDate/releaseDate";
 import { useAuth0 } from "@auth0/auth0-react";
-import { Loading } from "../../components/loading/loading";
+import { Loading } from "../../components/loadings/loadings";
 
 export const Detailspage = () => {
   const { articleID } = useParams();

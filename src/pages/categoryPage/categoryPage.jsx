@@ -12,7 +12,7 @@ import { NavLink } from "react-router-dom";
 import { GridItem, NeedLogIn } from "../../components/gridContainer/gridContainer.Styled";
 import { useAuth0 } from "@auth0/auth0-react";
 import { LoginButton } from "../../components/loginButton/loginButton";
-import { Loading } from "../../components/loading/loading";
+import { Loading } from "../../components/loadings/loadings";
 
 export const CategoryPage = () => {
   const { category } = useParams();

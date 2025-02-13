@@ -4,7 +4,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 import { LogoutButton } from "../logoutButton/logoutButton";
 import { LoginButton } from "../loginButton/loginButton";
 import { Container } from "../container/container";
-import { Loading } from "../loading/loading";
+import { Loading } from "../loadings/loadings";
 
 export const Profile = () => {
   const { user, isAuthenticated, isLoading } = useAuth0();
