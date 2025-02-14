@@ -22,5 +22,11 @@ export const DetailsStyled = styled.section`
         margin: 1rem 0;
       }
     }
+    ul {
+      margin: 0 1rem;
+    }
+    ol {
+      margin: 0 1rem;
+    }
   }
 `;

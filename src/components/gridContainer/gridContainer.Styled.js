@@ -186,9 +186,10 @@ export const GridContainerStyled = styled.div`
     }
 
     figure {
-      grid-template-columns: 1fr;
       grid-auto-rows: max-content;
+      object-fit: cover;
       height: 500px;
+      grid-template-rows: minmax(0, 0.7fr) minmax(0, 1fr);
     }
 
     .need-login-0,
