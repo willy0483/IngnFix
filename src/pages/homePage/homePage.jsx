@@ -11,7 +11,6 @@ import { GridItem, NeedLogIn } from "../../components/gridContainer/gridContaine
 import { useAuth0 } from "@auth0/auth0-react";
 
 import { LoginButton } from "../../components/loginButton/loginButton";
-import { Loading } from "../../components/loading/loading";
 
 export const HomePage = () => {
   const [articleData, setArticleData] = useState();
@@ -32,7 +31,7 @@ export const HomePage = () => {
   if (isLoading) {
     return (
       <Container width={"1200px"}>
-        <Loading />
+        <p>Loading...</p>
       </Container>
     );
   }
