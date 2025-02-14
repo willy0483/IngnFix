@@ -1,6 +1,16 @@
 import styled from "styled-components";
 
-export const GridItem = styled.div``;
+export const GridItem = styled.div`
+  ${({ index }) =>
+    index >= 9 &&
+    index <= 1000 &&
+    `
+    figure {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  `}
+`;
 export const GridContainerStyled = styled.div`
   display: grid;
   grid-template-areas:
