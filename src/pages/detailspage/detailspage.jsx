@@ -7,12 +7,12 @@ import { Container } from "../../components/container/container";
 import { AuthorName, DateAuthorContainer } from "../../components/article/article.Styled";
 import { ReleaseDate } from "../../components/releaseDate/releaseDate";
 import { useAuth0 } from "@auth0/auth0-react";
+import { Loading } from "../../components/loading/loading";
 
 export const Detailspage = () => {
   const { articleID } = useParams();
   const [articleDetails, setArticleDetails] = useState();
   const { isLoading } = useAuth0();
-
   useEffect(() => {
     client
       .getEntries({
@@ -22,6 +22,14 @@ export const Detailspage = () => {
       .then((data) => setArticleDetails(data))
       .catch((err) => console.log(err));
   }, [articleID]);
+
+  if (isLoading) {
+    return (
+      <Container width={"1200px"}>
+        <Loading />
+      </Container>
+    );
+  }
 
   console.log(articleDetails);
 

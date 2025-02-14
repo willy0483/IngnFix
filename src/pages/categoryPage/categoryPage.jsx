@@ -12,6 +12,7 @@ import { NavLink } from "react-router-dom";
 import { GridItem, NeedLogIn } from "../../components/gridContainer/gridContainer.Styled";
 import { useAuth0 } from "@auth0/auth0-react";
 import { LoginButton } from "../../components/loginButton/loginButton";
+import { Loading } from "../../components/loading/loading";
 
 export const CategoryPage = () => {
   const { category } = useParams();
@@ -27,6 +28,14 @@ export const CategoryPage = () => {
       .then((data) => setCategoryArticles(data))
       .catch((err) => console.log(err));
   }, [category]);
+
+  if (isLoading) {
+    return (
+      <Container width={"1200px"}>
+        <Loading />
+      </Container>
+    );
+  }
 
   console.log(categoryArticles);
 
