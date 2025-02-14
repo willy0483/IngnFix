@@ -4,7 +4,8 @@ import { NavLink } from "react-router-dom";
 
 import { useAuth0 } from "@auth0/auth0-react";
 export const Navbar = ({ isOpen }) => {
-  const { isAuthenticated } = useAuth0();
+  const { isAuthenticated, loginWithRedirect } = useAuth0();
+
   return (
     <NavbarStyled isOpen={isOpen}>
       <ul>
@@ -30,7 +31,11 @@ export const Navbar = ({ isOpen }) => {
           <NavLink to="/category/Samfund">Samfund</NavLink>
         </li>
         <li>
-          {isAuthenticated ? <NavLink to="/profile">Profile</NavLink> : <NavLink>Log In</NavLink>}
+          {isAuthenticated ? (
+            <NavLink to="/profile">Profile</NavLink>
+          ) : (
+            <NavLink onClick={() => loginWithRedirect()}>Log In</NavLink>
+          )}
         </li>
       </ul>
     </NavbarStyled>
